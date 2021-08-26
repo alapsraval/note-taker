@@ -19,9 +19,18 @@ module.exports = (app) => {
     let newNote = req.body;
     newNote.id = uniqid();
     notesData.push(newNote);
-    fs.writeFile(notesFileURL, JSON.stringify(notesData), err => {
+    fs.writeFile(notesFileURL, JSON.stringify(notesData), (err) => {
       if (err) throw err;
-      res.json(notesData);
     })
+    res.json(newNote);
+  });
+
+  app.delete('/api/notes/:id', (req, res) => {
+    let noteId = req.params.id;
+    let newNotesData = notesData.filter(note => note.id !== noteId);
+    fs.writeFile(notesFileURL, JSON.stringify(newNotesData), (err) => {
+      if (err) throw err;
+    })
+    res.json(newNotesData);
   });
 };
