@@ -8,11 +8,11 @@ Note Taker is an application that can be used to write and save notes.
 4. [Contributions](#contributions)
 5. [Contact](#contact)
 6. [License](#license)
-7. [Screencast](#screencast)
+7. [Screenshots](#screenshots)
 
 ## Getting Started
 ### Dependencies
-node, npm
+node, npm, express
 
 ### Installation
 `npm install`
@@ -36,6 +36,7 @@ Copyright &copy; Alap Raval. All rights reserved.
 
 Licensed under the [MIT](https://opensource.org/licenses/MIT) license.
 
-## Screencast
+## Screenshots
 
-[![Note Taker](/screenshot.png)](https://youtu.be)
+![Note Taker - Home](public/assets/img/screenshot-1.png)
+![Note Taker - Notes](public/assets/img/screenshot-2.png)
